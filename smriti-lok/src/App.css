@@ -1,0 +1,269 @@
+:root {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-one {
+  position: relative;
+  text-align: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.center-content {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tagline-wrapper {
+  padding-left: 330px;
+}
+
+.main-title {
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 7rem;
+  font-weight: 900;
+  color: black;
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  font-weight: 550;
+  color: #1a1a1a;
+  background: linear-gradient(90deg, #000 0%, #000 68%, #dddcdd 65%, #dddcdd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  max-width: 800px;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.email-form {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid #ff2232;
+  border-radius: 50px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 330px;
+  box-shadow: 0 4px 15px rgba(255, 34, 50, 0.3);
+  transition: all 0.3s ease;
+}
+
+.email-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 34, 50, 0.5);
+}
+
+.email-input {
+  flex: 1;
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 0.85rem;
+  outline: none;
+  margin-right: -2px;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.join-hype-btn {
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px 22px;
+  background-color: #ff2232;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin: 0;
+  padding-right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 34, 50, 0.3);
+}
+
+.join-hype-btn:hover {
+  box-shadow: 0 8px 25px rgba(255, 34, 50, 0.5);
+}
+
+.join-hype-btn:active {
+  transform: translateY(-1px);
+}
+
+.join-hype-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+.footer-left p {
+  color: black;
+  margin: 0;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 34, 50, 0.2);
+  letter-spacing: 0.2px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 34, 50, 0.4);
+  background-color: rgba(255, 34, 50, 0.1);
+}
+
+.contact-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .center-content {
+    top: 25%;
+    gap: 1rem;
+  }
+
+  .tagline-wrapper {
+    padding-left: 0;
+  }
+
+  .bottom-content {
+    bottom: 100px;
+  }
+
+  .email-form {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  .email-input {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .join-hype-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-left p {
+    font-size: 0.7rem;
+    margin-left: 0;
+  }
+
+  .contact-btn {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+}
